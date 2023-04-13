@@ -446,15 +446,15 @@
       thisCart.deliveryFee = settings.cart.defaultDeliveryFee;
       thisCart.totalNumber = 0;
       thisCart.subtotalPrice = 0;
+
       for (const product of thisCart.products) {
         thisCart.subtotalPrice += product.price;
         thisCart.totalNumber += product.amount;
       }
-      thisCart.totalPrice = thisCart.subtotalPrice  + thisCart.deliveryFee;
-      if (thisCart.subtotalPrice == 0) {
+      if (!thisCart.totalNumber) {
         thisCart.deliveryFee = 0;
-        thisCart.totalPrice = thisCart.subtotalPrice;
       }
+      thisCart.totalPrice = thisCart.subtotalPrice  + thisCart.deliveryFee;
 
       console.log(
         'this cart numbers: ',
