@@ -54,18 +54,23 @@ class Cart {
   }
   add(menuProduct) {
     const thisCart = this;
-    // console.log('adding product', menuProduct);
-    /* generate HTML based on template */
-    const generatedHTML = templates.cartProduct(menuProduct);
-    /* create element using utils.createElementFromHTML */
-    const generatedDOM = utils.createDOMFromHTML(generatedHTML);
 
-    /* add element to menu */
-    thisCart.dom.productList.appendChild(generatedDOM);
+    if (menuProduct) {
+      // Generate HTML based on template
+      const generatedHTML = templates.cartProduct(menuProduct);
+      // Create an element using utils.createElementFromHTML
+      const generatedDOM = utils.createDOMFromHTML(generatedHTML);
 
-    thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
-    console.log('thisCart.products', thisCart.products);
-    thisCart.update();
+      // Add the element to the menu
+      thisCart.dom.productList.appendChild(generatedDOM);
+
+      thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
+      console.log('thisCart.products', thisCart.products);
+      thisCart.update();
+    } else {
+      console.error('menuProduct is undefined. Product cannot be added to the cart.');
+    }
+
   }
   update() {
     const thisCart = this;
