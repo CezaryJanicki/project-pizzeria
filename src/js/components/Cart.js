@@ -71,18 +71,6 @@ class Cart {
       console.error('menuProduct is undefined. Product cannot be added to the cart.');
     }
 
-    // console.log('adding product', menuProduct);
-    /* generate HTML based on template */
-    const generatedHTML = templates.cartProduct(menuProduct);
-    /* create element using utils.createElementFromHTML */
-    const generatedDOM = utils.createDOMFromHTML(generatedHTML);
-
-    /* add element to menu */
-    thisCart.dom.productList.appendChild(generatedDOM);
-
-    thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
-    console.log('thisCart.products', thisCart.products);
-    thisCart.update();
   }
   update() {
     const thisCart = this;

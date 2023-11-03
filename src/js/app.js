@@ -64,11 +64,6 @@ const app = {
       // Handle the case where thisApp.data.products is missing or empty
       console.error('No product data available. Products cannot be added to the cart.');
     }
-
-    // console.log('thisApp.data', thisApp.data);
-    for (let productData in thisApp.data.products) {
-      new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
-    }
   },
 
   initData: function () {
@@ -103,9 +98,9 @@ const app = {
 
   initBooking: function () {
     const thisApp = this;
-    const bookingElem = document.querySelector(select.containerOf.booking);
-    thisApp.booking = new Booking(bookingElem);
-    
+    thisApp.bookingElem = document.querySelector(select.containerOf.booking);
+    thisApp.booking = new Booking(thisApp.bookingElem);
+
   },
 
 
@@ -116,12 +111,10 @@ const app = {
     // console.log('classNames:', classNames);
     // console.log('settings:', settings);
     // console.log('templates:', templates);
+    thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
-    thisApp.initPages();
     thisApp.initBooking();
-
-
   },
 };
 
