@@ -43,9 +43,7 @@ export const select = {
       hoursAmount: '.hours-amount',
       tables: '.floor-plan .table',
     },
-    nav: {
-      links: '.main-nav a',
-    },
+
   },
   cart: {
     productList: '.cart__order-summary',
@@ -65,6 +63,9 @@ export const select = {
     price: '.cart__product-price',
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
+  },
+  nav: {
+    links: '.main-nav a',
   },
 };
 

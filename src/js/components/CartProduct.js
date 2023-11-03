@@ -11,7 +11,9 @@ class CartProduct {
     thisCartProduct.priceSingle =  menuProduct.priceSingle;
     thisCartProduct.amount = menuProduct.amount;
     thisCartProduct.params = menuProduct.params;
+    console.log('menuProduct.params:', menuProduct.params);
     thisCartProduct.paramsJSON = JSON.parse(JSON.stringify(menuProduct.params));
+    console.log('thisCartProduct.paramsJSON:', thisCartProduct.paramsJSON);
 
     thisCartProduct.getElements(element);
     thisCartProduct.initAmountWidget();
