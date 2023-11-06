@@ -14,6 +14,7 @@ class CartProduct {
     console.log('menuProduct.params:', menuProduct.params);
     thisCartProduct.paramsJSON = JSON.parse(JSON.stringify(menuProduct.params));
     console.log('thisCartProduct.paramsJSON:', thisCartProduct.paramsJSON);
+    console.log('menuProduct:', menuProduct);
 
     thisCartProduct.getElements(element);
     thisCartProduct.initAmountWidget();

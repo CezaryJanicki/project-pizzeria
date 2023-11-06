@@ -7,7 +7,7 @@ class AmountWidget extends BaseWidget{
     const thisWidget = this;
     thisWidget.getElements(element);
     thisWidget.initActions();
-    thisWidget.renderValue();
+
 
     thisWidget.value = thisWidget.dom.input.value;
     //console.log('Amount widget:', thisWidget);

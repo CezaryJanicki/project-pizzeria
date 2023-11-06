@@ -67,6 +67,7 @@ class Cart {
       thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
       console.log('thisCart.products', thisCart.products);
       thisCart.update();
+      console.log('menuProduct:', menuProduct);
     } else {
       console.error('menuProduct is undefined. Product cannot be added to the cart.');
     }
@@ -99,6 +100,7 @@ class Cart {
         elem.innerHTML = thisCart[key];
       }
     }
+
   }
   remove(cartProduct) {
     const thisCart = this;
