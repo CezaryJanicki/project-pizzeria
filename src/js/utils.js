@@ -63,9 +63,13 @@ utils.numberToHour = function(number){
 };
 
 utils.hourToNumber = function(hour){
-  const parts = hour.split(':');
-
-  return parseInt(parts[0]) + parseInt(parts[1])/60;
+  console.log('1!!!' + hour);
+  if (hour) {
+    const hourParts = hour.split(':');
+    return parseInt(hourParts[0]) + parseInt(hourParts[1]) / 60;
+  } else {
+    return 0; // or any default value you want to return for undefined hour
+  }
 };
 
 utils.dateToStr = function(dateObj){
