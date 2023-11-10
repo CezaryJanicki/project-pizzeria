@@ -212,42 +212,6 @@
       "images": [
         "<img class=\"active\" src=\"images/doughnut.svg\">"
       ]
-    },
-    {
-      "phone": "sdf",
-      "address": "asfd",
-      "totalNumber": 3,
-      "subtotalprice": 27,
-      "totalprice": 27,
-      "deliverFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "price": 27,
-          "priceSingle": 9,
-          "amount": 3,
-          "params": {}
-        }
-      ],
-      "id": "Wwx9fk4"
-    },
-    {
-      "phone": "sdf",
-      "address": "asfd",
-      "totalNumber": 3,
-      "subtotalprice": 27,
-      "totalprice": 27,
-      "deliverFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "price": 27,
-          "priceSingle": 9,
-          "amount": 3,
-          "params": {}
-        }
-      ],
-      "id": "2iN5PM-"
     }
   ],
   "events": [
@@ -371,12 +335,6 @@
     },
     {
       "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
     }
   ]
 }

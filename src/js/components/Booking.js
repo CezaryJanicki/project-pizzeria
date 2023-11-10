@@ -13,6 +13,7 @@ class Booking {
     thisBooking.initWidgets();
     thisBooking.getData();
     thisBooking.initTables();
+
   }
 
   getData() {
@@ -270,12 +271,12 @@ class Booking {
       .then(function (response) {
         return response.json();
       })
-      .then(function (parsedResponse) {
+      .then(function () {
         thisBooking.makeBooked(
-          parsedResponse.date,
-          parsedResponse.hour,
-          parsedResponse.duration,
-          parsedResponse.table
+          payload.date,
+          payload.hour,
+          payload.duration,
+          payload.table
         );
       });
     console.log('thisbooking.booked', thisBooking.booked);
